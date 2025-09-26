@@ -11,7 +11,7 @@ const contact = () => {
           <Phone size={24} />
         </a>
         <a
-          href="https://wa.me/919876543210"
+          href="https://wa.me/919876543610"
           target="_blank"
           rel="noreferrer"
           className="bg-green-500 p-3 rounded-full shadow text-white"
