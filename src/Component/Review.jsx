@@ -3,7 +3,7 @@ import React from "react";
 const Review = () => {
   return (
     <div>
-      {/* Testimonials Section */}
+     
       <section id="testimonials" className="max-w-6xl mx-auto px-4 py-16">
         <h3 className="text-2xl font-bold text-[#6E5A4C] mb-8 text-center">
           Happy Customers Say

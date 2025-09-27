@@ -1,6 +1,6 @@
 import React from "react";
 import { myData } from "./DummyData";
-
+import Estreewala from "../assets/Estreewala.png";
 const Navbar = ({
   mobileNavOpen,
   setMobileNavOpen,
@@ -17,13 +17,13 @@ const Navbar = ({
       <header className="bg-[#E9DDC9] shadow sticky top-0 z-40">
         <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-md bg-[#6E5A4C] flex items-center justify-center text-white font-bold transform rotate-[-12deg] shadow-md">
-              LW
+            <div className="w-10 h-10 rounded-md bg-[#6E5A4C] flex items-center justify-center text-white font-bold  shadow-md">
+              <img src={Estreewala} alt="Estreewala" />
             </div>
 
             <div>
-              <h1 className="text-lg font-semibold text-[#2E2A53]">
-                Laundry Waala
+              <h1 className="text-lg font-semibold  text-[#2E2A53]">
+                Estree Walla
               </h1>
               <p className="text-xs text-[#6E5A4C]">Clean. Fast. Trusted.</p>
             </div>
