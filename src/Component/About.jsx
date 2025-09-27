@@ -7,15 +7,15 @@ const About = () => {
         id="about"
         className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 items-start"
       >
-        <div className="md:col-span-2 bg-white p-6 rounded shadow">
+        <div className="md:col-span-2 bg-[#F5F0E8] p-6 rounded shadow">
           <h3 className="text-lg font-semibold">About Laundry Waala</h3>
-          <p className="mt-3 text-gray-600">
+          <p className="mt-3 text-[#2E2A53] ">
             Laundry Waala brings professional laundry and dry cleaning services
             to your doorstep. We focus on quality, quick turnaround, and safe
             handling of your garments. Our trained staff follows hygienic
             processes and uses eco-friendly products.
           </p>
-          <ul className="mt-4 grid grid-cols-2 gap-2 text-sm text-gray-600">
+          <ul className="mt-4 grid grid-cols-2 gap-2 text-sm text-[#2E2A53]">
             <li>Pickup & Delivery</li>
             <li>Eco detergents</li>
             <li>Online payments</li>
@@ -23,7 +23,7 @@ const About = () => {
           </ul>
         </div>
 
-        <div className="bg-white p-6 rounded shadow">
+        <div className=" p-6 bg-[#F5F0E8] rounded shadow">
           <h4 className="font-semibold">Quick Contact</h4>
           <p className="text-sm text-gray-600 mt-2">
             Call or WhatsApp us for same-day queries.

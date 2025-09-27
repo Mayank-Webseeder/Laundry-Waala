@@ -9,15 +9,15 @@ const Service = ({ openBooking, faqs }) => {
           {myData.map((s) => (
             <div
               key={s.title}
-              className="bg-white p-4 rounded shadow flex flex-col"
+              className="bg-[#F5F0E8] p-4 rounded shadow flex flex-col"
             >
               <div className="font-semibold">{s.title}</div>
-              <p className="text-xs text-gray-500 flex-1 mt-2">{s.desc}</p>
+              <p className="text-xs text-[#2E2A53] flex-1 mt-2">{s.desc}</p>
               <div className="mt-3 flex items-center justify-between">
-                <span className="text-xs text-gray-600">ETA {s.eta}</span>
+                <span className="text-xs text-[#2E2A53] ">ETA {s.eta}</span>
                 <button
                   onClick={() => openBooking(s.title)}
-                  className="text-pink-600 text-xs"
+                  className="text-[#100f1b] text-xs"
                 >
                   Book
                 </button>
@@ -26,13 +26,18 @@ const Service = ({ openBooking, faqs }) => {
           ))}
         </div>
       </section>
-      <section id="faqs" className="mt-8 bg-white p-6 rounded shadow">
-        <h3 className="text-lg font-semibold">FAQs</h3>
+      <section id="faqs" className="mt-8 bg-[#F5F0E8] p-6 rounded shadow">
+        <h3 className="text-lg font-semibold text-[#1A1A1A]">FAQs</h3>
         <div className="mt-4 space-y-2">
           {faqs.map((f, idx) => (
-            <details key={idx} className="p-3 border rounded">
-              <summary className="font-medium cursor-pointer">{f.q}</summary>
-              <p className="mt-2 text-sm text-gray-600">{f.a}</p>
+            <details
+              key={idx}
+              className="p-3 border border-[#C9B9A5] rounded bg-[#E9DDC9]"
+            >
+              <summary className="font-medium cursor-pointer text-[#2E2A53]">
+                {f.q}
+              </summary>
+              <p className="mt-2 text-sm text-[#6E5A4C]">{f.a}</p>
             </details>
           ))}
         </div>

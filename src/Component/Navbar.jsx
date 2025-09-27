@@ -14,34 +14,36 @@ const Navbar = ({
 }) => {
   return (
     <div>
-      <header className="bg-white shadow-sm sticky top-0 z-40">
+      <header className="bg-[#F5F0E8] shadow-sm sticky top-0 z-40">
         <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-md bg-pink-500 flex items-center justify-center text-white font-bold">
+            <div className="w-10 h-10 rounded-md bg-[#2E2A53] flex items-center justify-center text-white font-bold">
               LW
             </div>
             <div>
-              <h1 className="text-lg font-semibold">Laundry Waala</h1>
-              <p className="text-xs text-gray-500">Clean. Fast. Trusted.</p>
+              <h1 className="text-lg font-semibold text-[#1A1A1A]">
+                Laundry Waala
+              </h1>
+              <p className="text-xs text-[#6E5A4C]">Clean. Fast. Trusted.</p>
             </div>
           </div>
 
           <nav className="hidden md:flex items-center gap-6 text-sm">
-            <a href="#services" className="hover:text-pink-600">
+            <a href="#services" className="hover:text-[#2E2A53]">
               Services
             </a>
-            <a href="#pricing" className="hover:text-pink-600">
+            <a href="#pricing" className="hover:text-[#2E2A53]">
               Pricing
             </a>
-            <a href="#about" className="hover:text-pink-600">
+            <a href="#about" className="hover:text-[#2E2A53]">
               About
             </a>
-            <a href="#faqs" className="hover:text-pink-600">
+            <a href="#faqs" className="hover:text-[#2E2A53]">
               FAQs
             </a>
             <button
               onClick={() => openBooking()}
-              className="ml-2 bg-pink-600 text-white px-4 py-2 rounded-md shadow"
+              className="ml-2 bg-[#2E2A53] text-[#F5F0E8] px-4 py-2 rounded-md shadow hover:bg-[#6E5A4C]"
             >
               Book Pickup
             </button>
@@ -50,7 +52,7 @@ const Navbar = ({
           <div className="md:hidden">
             <button
               onClick={() => setMobileNavOpen(!mobileNavOpen)}
-              className="p-2 rounded-md border"
+              className="p-2 rounded-md border border-[#6E5A4C]"
             >
               {mobileNavOpen ? "Close" : "Menu"}
             </button>
@@ -58,7 +60,7 @@ const Navbar = ({
         </div>
 
         {mobileNavOpen && (
-          <div className="md:hidden bg-white border-t">
+          <div className="md:hidden bg-[#F5F0E8] border-t border-[#C9B9A5]">
             <div className="px-4 py-4 flex flex-col gap-3">
               <a href="#services" onClick={() => setMobileNavOpen(false)}>
                 Services
@@ -77,7 +79,7 @@ const Navbar = ({
                   setMobileNavOpen(false);
                   openBooking();
                 }}
-                className="bg-pink-600 text-white px-4 py-2 rounded-md"
+                className="bg-[#2E2A53] text-[#F5F0E8] px-4 py-2 rounded-md hover:bg-[#6E5A4C]"
               >
                 Book Pickup
               </button>
@@ -89,7 +91,7 @@ const Navbar = ({
         <div className="fixed inset-0 bg-black/40 z-50 flex items-center justify-center p-4">
           <form
             onSubmit={submitBooking}
-            className="bg-white max-w-md w-full rounded-lg p-6 shadow"
+            className="bg-[#F5F0E8] max-w-md w-full rounded-lg p-6 shadow"
           >
             <div className="flex items-center justify-between">
               <h4 className="font-semibold">Request Pickup</h4>
@@ -109,7 +111,7 @@ const Navbar = ({
               className="w-full mt-1 p-2 border rounded"
             />
             {errors.name && (
-              <div className="text-xs text-red-600 mt-1">{errors.name}</div>
+              <div className="text-xs text-[#2E2A53] mt-1">{errors.name}</div>
             )}
 
             <label className="block mt-3 text-sm">Phone</label>
@@ -120,7 +122,7 @@ const Navbar = ({
               placeholder="10-digit number"
             />
             {errors.phone && (
-              <div className="text-xs text-red-600 mt-1">{errors.phone}</div>
+              <div className="text-xs text-[#2E2A53] mt-1">{errors.phone}</div>
             )}
 
             <label className="block mt-3 text-sm">Address</label>
@@ -131,7 +133,9 @@ const Navbar = ({
               rows={3}
             />
             {errors.address && (
-              <div className="text-xs text-red-600 mt-1">{errors.address}</div>
+              <div className="text-xs text-[#2E2A53] mt-1">
+                {errors.address}
+              </div>
             )}
 
             <label className="block mt-3 text-sm">Service</label>
@@ -148,7 +152,7 @@ const Navbar = ({
             <div className="mt-4 flex items-center justify-between">
               <button
                 type="submit"
-                className="bg-pink-600 text-white px-4 py-2 rounded"
+                className="bg-[#2E2A53] text-white px-4 py-2 rounded"
               >
                 Request Pickup
               </button>

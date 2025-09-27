@@ -6,7 +6,7 @@ const contact = () => {
       <div className="fixed right-4 bottom-6 flex flex-col gap-3 z-40">
         <a
           href="tel:+919876543210"
-          className="bg-white p-3 rounded-full shadow flex items-center justify-center"
+          className="bg-[#F5F0E8] p-3 rounded-full shadow flex items-center justify-center"
         >
           <Phone size={24} />
         </a>
