@@ -1,44 +1,30 @@
 import React from "react";
 import { myData } from "./DummyData";
-const Service = ({ openBooking, faqs }) => {
+const Service = ({ openBooking }) => {
   return (
     <div>
-      <section id="services" className="mt-8">
-        <h3 className="text-lg font-semibold">Services</h3>
-        <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+      <section id="services" className="max-w-6xl mx-auto px-4 py-16">
+        <h3 className="text-2xl font-bold text-[#6E5A4C] mb-8">Our Services</h3>
+        <div className="grid md:grid-cols-4 gap-6">
           {myData.map((s) => (
             <div
               key={s.title}
-              className="bg-[#F5F0E8] p-4 rounded shadow flex flex-col"
+              className="bg-[#E9DDC9] p-6 rounded-lg shadow hover:shadow-lg transition flex flex-col"
             >
-              <div className="font-semibold">{s.title}</div>
-              <p className="text-xs text-[#2E2A53] flex-1 mt-2">{s.desc}</p>
-              <div className="mt-3 flex items-center justify-between">
-                <span className="text-xs text-[#2E2A53] ">ETA {s.eta}</span>
+              <div className="font-semibold text-lg text-[#2E2A53]">
+                {s.title}
+              </div>
+              <p className="text-[#6E5A4C] flex-1 mt-2">{s.desc}</p>
+              <div className="mt-4 flex justify-between items-center">
+                <span className="text-sm text-[#6E5A4C]">ETA {s.eta}</span>
                 <button
                   onClick={() => openBooking(s.title)}
-                  className="text-[#100f1b] text-xs"
+                  className="text-[#2E2A53] text-sm font-semibold border border-[#2E2A53] px-2 py-1 rounded"
                 >
                   Book
                 </button>
               </div>
             </div>
-          ))}
-        </div>
-      </section>
-      <section id="faqs" className="mt-8 bg-[#F5F0E8] p-6 rounded shadow">
-        <h3 className="text-lg font-semibold text-[#1A1A1A]">FAQs</h3>
-        <div className="mt-4 space-y-2">
-          {faqs.map((f, idx) => (
-            <details
-              key={idx}
-              className="p-3 border border-[#C9B9A5] rounded bg-[#E9DDC9]"
-            >
-              <summary className="font-medium cursor-pointer text-[#2E2A53]">
-                {f.q}
-              </summary>
-              <p className="mt-2 text-sm text-[#6E5A4C]">{f.a}</p>
-            </details>
           ))}
         </div>
       </section>

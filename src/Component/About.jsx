@@ -23,7 +23,7 @@ const About = () => {
           </ul>
         </div>
 
-        <div className=" p-6 bg-[#F5F0E8] rounded shadow">
+        <div className="bg-white p-6 rounded shadow">
           <h4 className="font-semibold">Quick Contact</h4>
           <p className="text-sm text-gray-600 mt-2">
             Call or WhatsApp us for same-day queries.

@@ -2,10 +2,14 @@ import React, { useState, useEffect } from "react";
 import Navbar from "./Component/Navbar";
 import HeroSection from "./Component/HeroSection";
 import Pricing from "./Component/Pricing";
-import About from "./Component/About";
+
 import Service from "./Component/Service";
 import Footer from "./Component/footer";
 import Contact from "./Component/contact";
+import Choose from "./Component/Choose";
+import Review from "./Component/Review";
+import FAQs from "./Component/FAQs";
+import Cta from "./Component/Cta";
 
 const App = () => {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
@@ -21,7 +25,6 @@ const App = () => {
   const [pricingTab, setPricingTab] = useState("All");
 
   useEffect(() => {
-    // close mobile nav on resize
     const onResize = () => {
       if (window.innerWidth > 768) setMobileNavOpen(false);
     };
@@ -112,17 +115,21 @@ const App = () => {
           locateMe={locateMe}
           openBooking={openBooking}
         ></HeroSection>
+        <Choose></Choose>
+        <Service openBooking={openBooking}></Service>
         <Pricing
           setPricingTab={setPricingTab}
           pricingTab={pricingTab}
           pricing={pricing}
         ></Pricing>
-        <About></About>
-        <Service openBooking={openBooking} faqs={faqs}></Service>
+        <Review></Review>
+        <FAQs faqs={faqs}></FAQs>
+        <Cta openBooking={openBooking}></Cta>
+
         <Footer></Footer>
         <Contact></Contact>
         {location && (
-          <div className="fixed left-4 bottom-4 bg-white p-3 rounded shadow text-sm z-40">
+          <div className="fixed left-4 bottom-4 bg-[#F5F0E8] p-3 rounded shadow text-sm z-40">
             Located at {location.lat.toFixed(4)}, {location.lng.toFixed(4)}
           </div>
         )}

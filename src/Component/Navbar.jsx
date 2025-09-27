@@ -14,14 +14,15 @@ const Navbar = ({
 }) => {
   return (
     <div>
-      <header className="bg-[#F5F0E8] shadow-sm sticky top-0 z-40">
+      <header className="bg-[#E9DDC9] shadow sticky top-0 z-40">
         <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-md bg-[#2E2A53] flex items-center justify-center text-white font-bold">
+            <div className="w-10 h-10 rounded-md bg-[#6E5A4C] flex items-center justify-center text-white font-bold transform rotate-[-12deg] shadow-md">
               LW
             </div>
+
             <div>
-              <h1 className="text-lg font-semibold text-[#1A1A1A]">
+              <h1 className="text-lg font-semibold text-[#2E2A53]">
                 Laundry Waala
               </h1>
               <p className="text-xs text-[#6E5A4C]">Clean. Fast. Trusted.</p>
@@ -36,14 +37,14 @@ const Navbar = ({
               Pricing
             </a>
             <a href="#about" className="hover:text-[#2E2A53]">
-              About
+              Why Choose Us
             </a>
             <a href="#faqs" className="hover:text-[#2E2A53]">
               FAQs
             </a>
             <button
               onClick={() => openBooking()}
-              className="ml-2 bg-[#2E2A53] text-[#F5F0E8] px-4 py-2 rounded-md shadow hover:bg-[#6E5A4C]"
+              className="ml-2 bg-[#2E2A53] text-[#F5F0E8] px-4 py-2 rounded-md shadow"
             >
               Book Pickup
             </button>
@@ -52,7 +53,7 @@ const Navbar = ({
           <div className="md:hidden">
             <button
               onClick={() => setMobileNavOpen(!mobileNavOpen)}
-              className="p-2 rounded-md border border-[#6E5A4C]"
+              className="p-2 rounded-md border border-[#C9B9A5]"
             >
               {mobileNavOpen ? "Close" : "Menu"}
             </button>
@@ -60,7 +61,7 @@ const Navbar = ({
         </div>
 
         {mobileNavOpen && (
-          <div className="md:hidden bg-[#F5F0E8] border-t border-[#C9B9A5]">
+          <div className="md:hidden bg-[#E9DDC9] border-t">
             <div className="px-4 py-4 flex flex-col gap-3">
               <a href="#services" onClick={() => setMobileNavOpen(false)}>
                 Services
@@ -69,7 +70,7 @@ const Navbar = ({
                 Pricing
               </a>
               <a href="#about" onClick={() => setMobileNavOpen(false)}>
-                About
+                Why Choose Us
               </a>
               <a href="#faqs" onClick={() => setMobileNavOpen(false)}>
                 FAQs
@@ -79,7 +80,7 @@ const Navbar = ({
                   setMobileNavOpen(false);
                   openBooking();
                 }}
-                className="bg-[#2E2A53] text-[#F5F0E8] px-4 py-2 rounded-md hover:bg-[#6E5A4C]"
+                className="bg-[#2E2A53] text-[#F5F0E8] px-4 py-2 rounded-md"
               >
                 Book Pickup
               </button>
@@ -94,55 +95,53 @@ const Navbar = ({
             className="bg-[#F5F0E8] max-w-md w-full rounded-lg p-6 shadow"
           >
             <div className="flex items-center justify-between">
-              <h4 className="font-semibold">Request Pickup</h4>
+              <h4 className="font-semibold text-[#2E2A53]">Request Pickup</h4>
               <button
                 type="button"
                 onClick={() => setShowBooking(false)}
-                className="text-gray-500"
+                className="text-[#6E5A4C]"
               >
                 Close
               </button>
             </div>
 
-            <label className="block mt-4 text-sm">Name</label>
+            <label className="block mt-4 text-sm text-[#2E2A53]">Name</label>
             <input
               value={form.name}
               onChange={(e) => setForm({ ...form, name: e.target.value })}
-              className="w-full mt-1 p-2 border rounded"
+              className="w-full mt-1 p-2 border border-[#C9B9A5] rounded"
             />
             {errors.name && (
-              <div className="text-xs text-[#2E2A53] mt-1">{errors.name}</div>
+              <div className="text-xs text-red-600 mt-1">{errors.name}</div>
             )}
 
-            <label className="block mt-3 text-sm">Phone</label>
+            <label className="block mt-3 text-sm text-[#2E2A53]">Phone</label>
             <input
               value={form.phone}
               onChange={(e) => setForm({ ...form, phone: e.target.value })}
-              className="w-full mt-1 p-2 border rounded"
+              className="w-full mt-1 p-2 border border-[#C9B9A5] rounded"
               placeholder="10-digit number"
             />
             {errors.phone && (
-              <div className="text-xs text-[#2E2A53] mt-1">{errors.phone}</div>
+              <div className="text-xs text-red-600 mt-1">{errors.phone}</div>
             )}
 
-            <label className="block mt-3 text-sm">Address</label>
+            <label className="block mt-3 text-sm text-[#2E2A53]">Address</label>
             <textarea
               value={form.address}
               onChange={(e) => setForm({ ...form, address: e.target.value })}
-              className="w-full mt-1 p-2 border rounded"
+              className="w-full mt-1 p-2 border border-[#C9B9A5] rounded"
               rows={3}
             />
             {errors.address && (
-              <div className="text-xs text-[#2E2A53] mt-1">
-                {errors.address}
-              </div>
+              <div className="text-xs text-red-600 mt-1">{errors.address}</div>
             )}
 
-            <label className="block mt-3 text-sm">Service</label>
+            <label className="block mt-3 text-sm text-[#2E2A53]">Service</label>
             <select
               value={form.service}
               onChange={(e) => setForm({ ...form, service: e.target.value })}
-              className="w-full mt-1 p-2 border rounded"
+              className="w-full mt-1 p-2 border border-[#C9B9A5] rounded"
             >
               {myData.map((s) => (
                 <option key={s.title}>{s.title}</option>
@@ -152,7 +151,7 @@ const Navbar = ({
             <div className="mt-4 flex items-center justify-between">
               <button
                 type="submit"
-                className="bg-[#2E2A53] text-white px-4 py-2 rounded"
+                className="bg-[#2E2A53] text-[#F5F0E8] px-4 py-2 rounded"
               >
                 Request Pickup
               </button>
@@ -168,7 +167,7 @@ const Navbar = ({
                       : form.address,
                   });
                 }}
-                className="text-sm"
+                className="text-sm text-[#6E5A4C] hover:underline"
               >
                 Use My Location
               </button>

@@ -1,62 +1,37 @@
 import React from "react";
 
-const Pricing = ({ pricing, pricingTab, setPricingTab }) => {
+const Pricing = () => {
   return (
     <div>
       <section
         id="pricing"
-        className="mt-12 bg-[#E9DDC9] rounded-lg p-6 shadow"
+        className="max-w-6xl mx-auto px-4 py-16 bg-[#E9DDC9] rounded-lg shadow my-10"
       >
-        <div className="flex items-center justify-between">
-          <h3 className="text-lg font-semibold text-[#1A1A1A]">Our Pricing</h3>
-          <div className="flex items-center gap-2">
-            {["All", "Delicates", "Dry Clean"].map((t) => (
-              <button
-                key={t}
-                onClick={() => setPricingTab(t)}
-                className={`px-3 py-1 rounded ${
-                  pricingTab === t
-                    ? "bg-[#2E2A53] text-[#F5F0E8]"
-                    : "border border-[#6E5A4C] text-[#6E5A4C]"
-                }`}
-              >
-                {t}
-              </button>
-            ))}
+        <h3 className="text-2xl font-bold text-[#6E5A4C] mb-8">
+          Subscription Plans
+        </h3>
+        <div className="grid md:grid-cols-3 gap-6">
+          <div className="bg-[#F5F0E8] p-6 rounded-lg shadow hover:shadow-lg text-center">
+            <h4 className="font-semibold text-lg text-[#2E2A53]">Basic</h4>
+            <p className="text-[#6E5A4C] mt-2">₹499/month - 10 items</p>
+            <button className="mt-4 bg-[#2E2A53] text-[#F5F0E8] px-4 py-2 rounded">
+              Subscribe
+            </button>
           </div>
-        </div>
-
-        <div className="mt-4 overflow-x-auto">
-          <table className="w-full text-sm">
-            <thead className="bg-[#2E2A53] text-[#F5F0E8]">
-              <tr className="text-left text-xs">
-                <th className="pb-2">Item</th>
-                <th className="pb-2">Wash</th>
-                <th className="pb-2">Iron</th>
-                <th className="pb-2">Dry Clean</th>
-              </tr>
-            </thead>
-            <tbody>
-              {pricing
-                .filter(
-                  (p) =>
-                    pricingTab === "All" ||
-                    p.category === pricingTab ||
-                    (pricingTab === "Delicates" && p.category === "Delicates")
-                )
-                .map((p, i) => (
-                  <tr
-                    key={p.item}
-                    className={i % 2 === 0 ? "bg-[#F5F0E8]" : "bg-[#E9DDC9]"}
-                  >
-                    <td className="py-3 px-2">{p.item}</td>
-                    <td className="py-3 px-2">{p.wash ? `₹${p.wash}` : "-"}</td>
-                    <td className="py-3 px-2">{p.iron ? `₹${p.iron}` : "-"}</td>
-                    <td className="py-3 px-2">{p.dry ? `₹${p.dry}` : "-"}</td>
-                  </tr>
-                ))}
-            </tbody>
-          </table>
+          <div className="bg-[#F5F0E8] p-6 rounded-lg shadow hover:shadow-lg text-center">
+            <h4 className="font-semibold text-lg text-[#2E2A53]">Standard</h4>
+            <p className="text-[#6E5A4C] mt-2">₹899/month - 20 items</p>
+            <button className="mt-4 bg-[#2E2A53] text-[#F5F0E8] px-4 py-2 rounded">
+              Subscribe
+            </button>
+          </div>
+          <div className="bg-[#F5F0E8] p-6 rounded-lg shadow hover:shadow-lg text-center">
+            <h4 className="font-semibold text-lg text-[#2E2A53]">Premium</h4>
+            <p className="text-[#6E5A4C] mt-2">₹1299/month - 30 items</p>
+            <button className="mt-4 bg-[#2E2A53] text-[#F5F0E8] px-4 py-2 rounded">
+              Subscribe
+            </button>
+          </div>
         </div>
       </section>
     </div>
