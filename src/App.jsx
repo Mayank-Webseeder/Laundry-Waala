@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "./Component/Navbar";
 import HeroSection from "./Component/HeroSection";
-import Pricing from "./Component/Pricing";
-
+import Feature from "./Component/feature";
+import About from "./Component/About";
 import Service from "./Component/Service";
 import Footer from "./Component/footer";
 import Contact from "./Component/contact";
@@ -10,6 +10,7 @@ import Choose from "./Component/Choose";
 import Review from "./Component/Review";
 import FAQs from "./Component/FAQs";
 import Cta from "./Component/Cta";
+import Details from "./Component/Details";
 
 const App = () => {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
@@ -110,20 +111,22 @@ const App = () => {
         form={form}
         setForm={setForm}
       ></Navbar>
-      <main className="max-w-6xl mx-auto px-4 py-10">
+      <main className="">
         <HeroSection
           locateMe={locateMe}
           openBooking={openBooking}
         ></HeroSection>
         <Choose></Choose>
         <Service openBooking={openBooking}></Service>
-        <Pricing
+        <Feature
           setPricingTab={setPricingTab}
           pricingTab={pricingTab}
           pricing={pricing}
-        ></Pricing>
+        ></Feature>
         <Review></Review>
+        <Details />
         <FAQs faqs={faqs}></FAQs>
+        <About />
         <Cta openBooking={openBooking}></Cta>
 
         <Footer></Footer>

@@ -1,6 +1,7 @@
 import React from "react";
 import { myData } from "./DummyData";
 import Estreewala from "../assets/Estreewala.png";
+
 const Navbar = ({
   mobileNavOpen,
   setMobileNavOpen,
@@ -14,15 +15,14 @@ const Navbar = ({
 }) => {
   return (
     <div>
-      <header className="bg-[#E9DDC9] shadow sticky top-0 z-40">
+      <header className="bg-[#FFF8E7] shadow sticky top-0 z-40">
         <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-md bg-[#6E5A4C] flex items-center justify-center text-white font-bold  shadow-md">
+            <div className="w-10 h-10 rounded-md bg-[#6E5A4C] flex items-center justify-center text-white font-bold shadow-md">
               <img src={Estreewala} alt="Estreewala" />
             </div>
-
             <div>
-              <h1 className="text-lg font-semibold  text-[#2E2A53]">
+              <h1 className="text-lg font-semibold text-[#2E2A53]">
                 Estree Walla
               </h1>
               <p className="text-xs text-[#6E5A4C]">Clean. Fast. Trusted.</p>
@@ -61,7 +61,7 @@ const Navbar = ({
         </div>
 
         {mobileNavOpen && (
-          <div className="md:hidden bg-[#E9DDC9] border-t">
+          <div className="md:hidden bg-[#FFF8E7] border-t">
             <div className="px-4 py-4 flex flex-col gap-3">
               <a href="#services" onClick={() => setMobileNavOpen(false)}>
                 Services
@@ -88,6 +88,7 @@ const Navbar = ({
           </div>
         )}
       </header>
+
       {showBooking && (
         <div className="fixed inset-0 bg-black/40 z-50 flex items-center justify-center p-4">
           <form
