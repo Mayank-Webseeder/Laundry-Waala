@@ -1,28 +1,20 @@
 import React from "react";
 
-// You would place the logo image in your project's 'public' or 'src/assets' folder
-// For this example, let's assume the logo is accessible via an import or public path.
-
 const EstreewallaAbout = () => {
   return (
     <div className="bg-gray-50 min-h-screen pt-12 pb-20 font-sans">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Main Heading Section */}
         <h1 className="text-3xl sm:text-4xl font-semibold text-gray-900 mb-10 text-center leading-tight">
           Learn More About Estreewalla – India's Premier Ironing and Pressing
           Chain
         </h1>
 
-        {/* Content Box (The main white card section) */}
-
-        {/* Sub-section Header */}
         <div className="mb-8">
           <h2 className="text-lg font-medium text-gray-700 border-b border-gray-200 pb-2">
             — Why Choose Estreewalla?
           </h2>
         </div>
 
-        {/* Service Section 1: Expert Pressing */}
         <div className="mb-10">
           <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-4">
             Expert Ironing and Pressing Services
@@ -38,7 +30,6 @@ const EstreewallaAbout = () => {
           </p>
         </div>
 
-        {/* Service Section 2: Convenient Solutions */}
         <div className="mb-10">
           <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-4">
             Convenient Doorstep Ironing Solutions
@@ -53,7 +44,6 @@ const EstreewallaAbout = () => {
           </p>
         </div>
 
-        {/* You can add more sections here */}
         <div>
           <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-4">
             Our Commitment to Quality

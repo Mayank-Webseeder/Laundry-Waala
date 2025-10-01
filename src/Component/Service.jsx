@@ -1,21 +1,26 @@
+import fea1 from "../assets/fea1.jpg";
+import fea2 from "../assets/fea2.jpg";
+import fea3 from "../assets/fea3.jpg";
+import fea4 from "../assets/fea4.jpg";
+
 const features = [
   {
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS28gruKoizEG8p6yORG5XE_voXkj6ZuCoirJs7iGiKlS-mwV7UTwfnEzuL8RruPMJWemk&usqp=CAU",
+    img: fea1,
     title: "Eco-Friendly Cleaning Machines",
     desc: "Gentle on clothes, kind to the planet.",
   },
   {
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0Yl_zEOaJkrhvh1uMdOFiX8z-aRdUBcVp5w&s",
+    img: fea2,
     title: "Certified Wool Care Technology",
     desc: "Special care for delicate fabrics.",
   },
   {
-    img: "https://media.istockphoto.com/id/1408980050/photo/woman-unloading-laundry-from-white-washing-machine.jpg?s=612x612&w=0&k=20&c=DnyVgB0GGb-1WGy68-gJodF7-sJT-F8mDntCR9JC5NA=",
+    img: fea3,
     title: "Expert Fabric Specialists",
     desc: "Experience you can trust.",
   },
   {
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKiGq6TrJ1Taoi8x53ub0bTG7fu24G5uYDkg&s",
+    img: fea4,
     title: "Sustainable Cleaning Solutions",
     desc: "Clean clothes, cleaner future.",
   },
@@ -46,23 +51,27 @@ const WhyUs = () => {
           </button>
         </div>
 
-        <div className="grid sm:grid-cols-2 gap-8">
+        <div className="grid gap-6 sm:grid-cols-1 lg:grid-cols-2">
           {features.map((feature, index) => (
             <div
               key={index}
-              className="flex flex-col items-center text-center p-8 bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 border border-[#E0D6CC]"
+              className="relative rounded-2xl overflow-hidden shadow-lg bg-[#E9DDC9] border border-[#6E5A4C] hover:shadow-2xl hover:scale-[1.02] transition duration-300"
             >
+              {/* Background image */}
               <img
                 src={feature.img}
                 alt={feature.title}
-                className="w-20 h-20 object-contain mb-5"
+                className="w-full h-72 object-cover"
               />
-              <h3 className="text-lg font-bold text-[#2E2A53] mb-2">
-                {feature.title}
-              </h3>
-              <p className="text-sm text-[#5C5046] leading-relaxed">
-                {feature.desc}
-              </p>
+
+              {/* Gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A]/80 to-transparent"></div>
+
+              {/* Text content */}
+              <div className="absolute bottom-4 left-4 text-[#F5F0E8]">
+                <h3 className="text-xl font-bold">{feature.title}</h3>
+                <p className="text-sm mt-1">{feature.desc}</p>
+              </div>
             </div>
           ))}
         </div>

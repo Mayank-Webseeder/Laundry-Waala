@@ -98,7 +98,7 @@ const App = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-[#F5F0E8] text-[#1A1A1A]">
+    <div className="min-h-[80vh] bg-gradient-to-r from-[#FDFCF9] to-[#EAE7DC] ">
       <Navbar
         mobileNavOpen={mobileNavOpen}
         setMobileNavOpen={setMobileNavOpen}

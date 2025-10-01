@@ -25,7 +25,6 @@ const Review = () => {
         </a>
       </p>
 
-      {/* Services Cards + Image (3 in one row) */}
       <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-6xl items-center">
         {/* Standard Delivery */}
         <div className="bg-white rounded-lg p-6 shadow hover:shadow-lg transition border border-[#E9DDC9] hover:border-[#6E5A4C]">
@@ -55,7 +54,6 @@ const Review = () => {
           </p>
         </div>
 
-        {/* Image */}
         <div className="flex justify-center h-80 gap-5">
           <img
             src={Driver}
